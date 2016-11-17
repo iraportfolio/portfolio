@@ -6,9 +6,7 @@ gem 'nokogiri', '1.6.5'
 gem 'pg'
 gem 'devise'
 gem 'cancancan'
-gem 'whenever', require: false
 gem 'carrierwave'
-gem 'carrierwave-imageoptimizer'
 gem 'mini_magick'
 gem 'ransack'
 gem 'dotenv-rails'
@@ -24,14 +22,6 @@ gem 'therubyracer'
 
 group :development, :test do
   gem 'byebug'
-end
-
-group :development do
-  gem 'capistrano', '3.2.1'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rails'
-  gem 'quiet_assets'
 end
 
 group :test do
