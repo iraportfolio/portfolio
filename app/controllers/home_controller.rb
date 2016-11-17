@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
     @title_image = Image.where(id: ENV['TITLE_IMAGE_ID']).first if ENV['TITLE_IMAGE_ID'].present?
+    @title_image = Photo.where(id: ENV['TITLE_IMAGE_ID']).first if @title_image.blank?
+
     album = Album.where(title: 'Portrait').first
     @link = album_path(album) if album
 
