@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151018183443) do
+ActiveRecord::Schema.define(version: 20161118141048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -117,6 +117,8 @@ ActiveRecord::Schema.define(version: 20151018183443) do
     t.text     "contact_text_ua"
     t.string   "facebook_account"
     t.string   "instagram_account"
+    t.integer  "title_image_id"
+    t.string   "title_image_title"
   end
 
   add_index "settings", ["env"], name: "index_settings_on_env", unique: true, using: :btree

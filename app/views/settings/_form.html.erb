@@ -2,6 +2,10 @@
   <%= f.input :env %>
   <%= f.input :host, label: 'Site domain' %>
   <%= f.input :title, label: 'Site title', input_html: {class: 'input-xxlarge'} %>
+
+  <%= f.input :title_image_id, label: 'Title Image ID' %>
+  <%= f.input :title_image_title, label: 'Title Image title', input_html: {class: 'input-xxlarge'} %>
+
   <%= f.input :copyright_holder %>
   <%= f.input :contact_text, input_html: {rows: 10, cols: 40, class: 'input-xxlarge'} %>
   <%= f.input :contact_text_ua, input_html: {rows: 10, cols: 40, class: 'input-xxlarge'} %>
