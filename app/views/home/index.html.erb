@@ -12,7 +12,7 @@
   </title>
   <meta name="description" content="<%= get_setting('description') %>">
   <meta name="author" content="<%= get_setting('copyright_holder') %>">
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
   <%= yield(:head) %>
   <%= auto_discovery_link_tag(:rss, rss_feed_url) %>
@@ -79,10 +79,10 @@
   </nav>
 </header>
 <main>
-  <% if @title_image.present? && @link.present? %>
-    <a class="image-link" href="<%= @link %>">
+  <% if @title_image.present? %>
+    <a class="image-link" href="<%= @link.present? ? @link : '/' %>">
       <%= image_tag(@title_image.asset.url(:big), alt: '', title: '') %>
-      <h3><%= ENV['TITLE_NAME'] %></h3>
+      <h3><%= get_setting('title_image_title') %></h3>
     </a>
   <% end %>
 </main>
