@@ -15,11 +15,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   process :get_version_dimensions
 
   version :big do
-    process resize_to_limit: [900, 700]
+    process resize_to_limit: [1100, 700]
     process :add_watermark
   end
   version :span2 do
-    process resize_to_limit: [900, 110]
+    process resize_to_limit: [1100, 110]
   end
 
   def extension_white_list
